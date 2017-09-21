@@ -20,7 +20,7 @@ Node* merge(Node *A,Node *B)
 		pB = pB->next;
 		n++;
 	}
-	pA = A,pB = B;
+	pA = A->next,pB = B->next;
 	if(m =< n)					//B表长或者相等时
 	{
 		pChead = pC = pA;			//表A的第一个结点为新表第一个结点
@@ -33,7 +33,7 @@ Node* merge(Node *A,Node *B)
 			pC->next = pA;			//表C的新一个结点为表A的当前结点
 			pC = pC->next;			//pC后移到pA位置
 		}
-		pC->next = pB				//连接表B剩下的一个或者多个结点
+		pC->next = pB;				//连接表B剩下的一个或者多个结点
 	}else{							//表A长的时候和上面一样
 		pChead = pC = pB;
 		while(pB ->next != NULL)
