@@ -7,7 +7,7 @@ typedef struct Node
 
 Node* merge(Node *A,Node *B)
 {
-	Node *pA = A,*pB = B,*pC = NULL,*pChead = NULL; 
+	Node *pA = A->next,*pB = B->next,*pC = NULL,*pChead = NULL; 
 	//pA/B/C 表A/B/C的当前结点，pChead表C的头指针
 	int m=1,n=1;
 	while(pA->next != NULL)		//A表数目为m
